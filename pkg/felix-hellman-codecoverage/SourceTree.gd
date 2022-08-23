@@ -178,7 +178,7 @@ func new_block():
 func parse_line_types(source):
 	var result = []
 	var multi_line_types = ["func", "if", "elif"]
-	var multi_lines : PoolStringArray = []
+	var multi_lines : PackedStringArray = []
 	var index = 1
 	for line in source.split("\n"):
 		var r = factory.as_line(line, index)

@@ -18,7 +18,7 @@ func register(file_information, file_name):
 	for method in file_information["methods"]:
 		register_method(method)
 	file_name = file_information["file"]
-	code_blocks.sort_custom(self, "sort_blocks")
+	code_blocks.sort_custom(sort_blocks)
 	for block in code_blocks:
 		block_into_lines(block)
 

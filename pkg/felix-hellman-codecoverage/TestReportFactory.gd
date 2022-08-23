@@ -41,7 +41,7 @@ func modify_impl(obj, source):
 		print(source)
 	var properties = {}
 	for x in obj.get_property_list():
-		 properties[x["name"]] = obj.get(x["name"])
+		properties[x["name"]] = obj.get(x["name"])
 	script.set_source_code(source)
 	script.reload()
 	obj.set_script(script)
@@ -55,7 +55,8 @@ func on_complete():
 		print("Found report for " + k)
 	var file = File.new()
 	file.open("user://coverage_report.json", File.WRITE)
-	file.store_string(to_json(output))
+	var json = JSON.new()
+	file.store_string(json.stringify(output))
 	print("Report saved at : " + file.get_path_absolute())
 	file.close()
 	

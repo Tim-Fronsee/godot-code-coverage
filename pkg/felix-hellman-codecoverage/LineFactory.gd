@@ -30,7 +30,7 @@ func as_line(l : String, index : int) -> SourceLine:
 		return to_return
 	return null
 
-func merge(lines: PoolStringArray, index) -> SourceLine:
+func merge(lines: PackedStringArray, index) -> SourceLine:
 	var line = lines[0]
 	for l in range(2 ,len(lines)):
 		line = line + " " + lines[l].replace("\n", "").replace("\t", "")

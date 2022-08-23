@@ -13,7 +13,7 @@ var dissallowed_sources = [
 
 func _ready():
 	add_child(factory)
-	get_tree().connect("node_added", self, "inject")
+	get_tree().connect("node_added", inject)
 
 	
 
